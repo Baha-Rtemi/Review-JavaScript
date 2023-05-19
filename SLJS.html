@@ -3,14 +3,17 @@
     <head>
         <title>Start Learn JavaScript</title>
         <script>
+            // hello(): name of function
             function hello() {
                 name = document.querySelector('#name').value;
+                //alert(`STRINGS..etc ${HERE WRITE VARIABLES}`)
                 alert(`Hello!, ${name}`)
             }
         </script>
     </head>
     <body>
         <form>
+            <!-- autofocus: automaticle focus on input ur select it -->
             <input type="text" autofocus placeholder="Write Your Name" id="name">
             <input type="submit" value="CLICK HERE" onclick="hello()">
         </form>
