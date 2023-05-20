@@ -7,8 +7,10 @@
     <title>Use JS to style</title>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // for each button run the function on it.
             document.querySelectorAll('button').forEach(function(button) {
                 button.onclick = function() {
+                    // access that (data-something) in JS using the element's (dataset) property.
                     document.querySelector('#hello').style.color = button.dataset.color;
                 }
             });
@@ -17,6 +19,7 @@
 </head>
 <body>
     <h1 id="hello">Hello!</h1>
+    <!-- (data-something) attribute to assign data to an HTML element. -->
     <button data-color="red">Red</button>
     <button data-color="green">Green</button>
     <button data-color="blue">Blue</button>
