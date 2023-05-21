@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorge JS</title>
+    <script>
+        // Check if there is counter value in localStorage
+        if (!localStorage.getItem('counter')) {
+            localStorage.setItem('counter', 0);
+        }
+        count = () => {
+            let counter = localStorage.getItem('counter');
+            counter++;
+            document.querySelector('h1').innerHTML = counter;
+            //Store counter in localStorage
+            localStorage.setItem('counter', counter);
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('h1').innerHTML = localStorage.getItem('counter');
+            document.querySelector('button').onclick = count;
+            setInterval(count, 1000);
+        })
+        
+    </script>
+</head>
+<body>
+    <h1>0</h1>
+    <button>Count</button>
+</body>
+</html>
